@@ -8,11 +8,9 @@ echo "commit_hash: $commit_hash"
 nonce=0
 while [[ $commit_hash != 0* ]]
 do
-  echo "no leading zero"
   echo "nonce: $nonce"
   git commit --amend -m "commiting! (nonce=$nonce)" >/dev/null
   commit_hash=$(git rev-parse HEAD)
   echo "commit_hash: $commit_hash"
-  echo "..."
   ((nonce++))
 done
