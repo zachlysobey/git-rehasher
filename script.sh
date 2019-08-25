@@ -13,5 +13,6 @@ do
   git commit --amend -m "commiting! (nonce=$nonce)" >/dev/null
   commit_hash=$(git log "--pretty=format:%H")
   echo "commit_hash: $commit_hash"
+  echo "..."
   ((nonce++))
 done
