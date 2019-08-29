@@ -1,5 +1,7 @@
 #!/bin/bash
 
+target_pattern=000*
+
 git commit -m "committing!"
 
 commit_hash=$(git rev-parse HEAD)
